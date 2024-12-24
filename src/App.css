@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.app {
+  text-align: center;
+  padding: 20px;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.movie-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  min-height: 180px;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+}
+
+.movie-image {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.movie-title {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #34495e;
+}
+
+.movie-rating {
+  font-size: 1.2rem;
+  color: #27ae60;
+}
+
+.movie-link {
+  margin-top: 10px;
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.movie-link:hover {
+  text-decoration: underline;
+}
+
+/* Loader Styles */
+.loader-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f4f4f4;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-text {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #3498db;
+  font-weight: bold;
+}
+
+/* Pagination Styles */
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.pagination-button {
+  padding: 10px 15px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.pagination-button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.pagination-button:hover:not(:disabled) {
+  background-color: #2980b9;
+}
+
+.pagination-info {
+  font-size: 1rem;
+  color: #34495e;
+}
